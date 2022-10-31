@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(&pjlf6i05z1$=e(4_6kvf+79blxvg=)i^om*-abm$+8!^kb)2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -88,9 +89,9 @@ DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.postgresql',
 'NAME': 'postgres',
-'USER': 'postgres',
-'PASSWORD': 'postgres',
-'HOST': 'db',
+'USER': 'negeek',
+'PASSWORD': os.environ['DB_PASS'],
+'HOST': os.environ['DB_HOST'],
 'PORT': 5432
 }
 }
@@ -131,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT= '/staticfiles/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

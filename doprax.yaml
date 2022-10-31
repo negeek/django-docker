@@ -1,0 +1,19 @@
+volumes:
+  - name:  static
+    mount: /staticfiles/
+envs:
+  - DB_PASS: postgres
+    type: password
+  - DB_NAME: bookstoreDB
+  - DB_HOST: postgresql
+
+services:
+  - mysql:
+      tag: 11
+      volumes:
+        - name: postgres_vol
+          mount: /var/lib/postgresql/data/
+      envs:
+        - POSTGRES_DB: bookstoreDB
+        - POSTGRES_USER: negeek
+        - POSTGRES_PASSWORD: postgres
