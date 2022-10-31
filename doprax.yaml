@@ -8,7 +8,7 @@ envs:
   - DB_HOST: postgresql
 
 services:
-  - mysql:
+  - postgresql:
       tag: 11
       volumes:
         - name: postgres_vol
