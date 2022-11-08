@@ -1,3 +1,4 @@
+#!/bin/bash
 source /book_env/bin/activate
 cd /code
 
