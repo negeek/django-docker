@@ -2,7 +2,7 @@ volumes:
   - name:  static
     mount: /staticfiles/
 envs:
-  - DB_PASS: postgres
+  - DB_PASS: random_pg 
     type: password
   - DB_NAME: bookstoreDB
   - DB_HOST: postgresql
@@ -16,4 +16,4 @@ services:
       envs:
         - POSTGRES_DB: bookstoreDB
         - POSTGRES_USER: negeek
-        - POSTGRES_PASSWORD: postgres
+        - POSTGRES_PASSWORD: random_pg 
