@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-(&pjlf6i05z1$=e(4_6kvf+79blxvg=)i^om*-abm$+8!^kb)2
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://book-storeirka.eu-ccofhtfzmvsd.dopraxapp.com/']
 
 
 # Application definition
