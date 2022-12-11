@@ -17,3 +17,6 @@ services:
         - POSTGRES_DB: bookstoreDB
         - POSTGRES_USER: negeek
         - POSTGRES_PASSWORD: random_pg 
+
+
+
